@@ -2,6 +2,9 @@
 A News Sender built by using Python Tkinter Library.
 
 In the GUI, you have to enter a valid name of a comapny, it sends you top 3 latest news of that company.
+
 It sends you news in form of email.
 
-
+# How it works
+1. It fetches top 3 latest news of specified company via an API.
+2. It sends us email via Python smtplib Library.
