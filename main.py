@@ -2,9 +2,10 @@ from tkinter import *
 import requests
 import smtplib
 from tkinter import messagebox
+import os
 
 news_url = "https://newsapi.org/v2/everything"
-news_api_key = "Your API Key"
+news_api_key = os.environ["API_KEY"]
 
 
 def question_button_clicked():
@@ -53,9 +54,10 @@ def send_mail():
         print("Mail sent successfully!")
 
 
-my_mail = "Sender's Mail"
-my_pass = "APP Password"
-receiver_mail = "Receiver's Mail"
+my_mail = os.environ["MY_EMAIL"]
+my_pass = os.environ["MY_PASS"]
+
+receiver_mail = "Email where you want to get news"
 
 window = Tk()
 window.config(pady=40, padx=30)
